@@ -9,17 +9,55 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="main.js"></script>
 </head>
+<style>
+    .button {
+              background-color:#4262a5;
+              border: none;
+              border-radius: 2px;
+              color: white;
+              padding: 5px 5px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 3px 3px;
+              cursor: pointer;
+            }
+    .body1{
+        margin: auto;
+         width: 18%;
+        border: 1px solid #4262a5 ;
+        }
+.center {
+    margin: auto;
+    text-align: center;
+    color: white;
+   width: 100%;
+   padding: 4px;
+ </style>
 <body>
+<br>
+<br>
+<br>
+<div class="body1">
+<br>
     <div class="mx-auto" style="width: 200px;">
     <form method="POST">
-            <h1>login</h1>
+            <div style="background-color:#4262a5;  width:100%; float:left;">
+                    <div class="center">
+                       <h3>Login</h3>
+                     </div>
+                     </div>
             {% csrf_token %}
             {{form}}
-            <input type="submit"><br>
+            <br>
+           <button type="submit" class="button" style="background-color: #4262a5; color: white;">
+           <b>Submit</b></button><br>
             <a href="/accounts/register">Register Here</a>
             <br>
             <a href="/">Home</a>
     </form>
     </div>
+</div>
 </body>
 </html>
