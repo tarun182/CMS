@@ -11,8 +11,45 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
     <script src="main.js"></script>
+    <style>
+        .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color:#4262a5;
+        color: white;
+        text-align: center;
+        font-size: 0.8em;
+     }
+        .button {
+              background-color:#4262a5;
+              border: none;
+              border-radius: 6px;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;}
+        .right {
+              position: absolute;
+              right: 0px;
+              width: 150px;
+            padding: 10px;
+            }
+    .center {
+        margin: auto;
+       width: 100%;
+       text-align: center;
+       color: rgb(233, 222, 222);
+       padding: 10px;}
+       </style>
 </head>
 <body>
+<<<<<<< HEAD
     <div class="container">
         <div class="mx-auto" style="width:350px;">
     <h1>This is home page</h1>
@@ -26,5 +63,22 @@
     
     <a href="/accounts/logout">logout</a>
     </div></div>
+=======
+  
+        
+                <div style="background-color:#4262a5;  width:100%; float:left;">
+                        <div class="center">
+                           <h1>Component Management System</h1>
+                         </div>
+                         </div>
+                         <div class="right">
+                                <a href="/accounts/logout"><button class="button">logout</button></a>
+                                </div>
+                                
+    <b>Welcome Home <b>{{user}}</b></b>
+     <div class="footer">
+                <p>Copyright© wipro python team </p>     
+            </div>
+>>>>>>> c0e22f94472a1714c580de32d6926b3cfccbb08e
 </body>
 </html>
