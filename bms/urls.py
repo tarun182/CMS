@@ -15,14 +15,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import home,index
+from django.conf.urls import url
+from .views import index
+from compo.views import home, details
 from accounts.views import login_view,register_view,logout_view
+from compo.views import home
+from . import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home',home),
     path('',index),
-    path("accounts/login", login_view),
-    path('accounts/register', register_view),
-    path('accounts/logout', logout_view),
+    path("accounts/login/", login_view),
+    path('accounts/register/', register_view),
+    path('accounts/logout/', logout_view),
+    #url(r'^details/(?P<Network_ID>\w+)/$', details, name='details'),
+    path('details/<Network_ID>/', details),
+
 ]

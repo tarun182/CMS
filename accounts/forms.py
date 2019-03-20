@@ -67,3 +67,5 @@ class UserRegisterForm(forms.ModelForm):
 
 
 
+
+

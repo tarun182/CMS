@@ -16,7 +16,13 @@
     <div class="container">
         <div class="mx-auto" style="width:350px;">
     <h1>This is home page</h1>
-    <p>welcome <b>{{user}}</b></p>
+    <p>welcome <b>{{user}}</b></p><br>
+    <p>{{title}} available are</p><br><br>
+    <ul>
+            {% for item in Items %}
+            <li><a href="/details/{{item.Network_ID}}">{{item.Component_Name}}</a></li>
+            {% endfor %}
+    </ul>
     
     <a href="/accounts/logout">logout</a>
     </div></div>

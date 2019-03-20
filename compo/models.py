@@ -1,29 +1,29 @@
 from django.db import models
 
 class items(models.Model):
-    component_name=models.CharField(max_length=200, blank=True)
+    Component_Name=models.CharField(max_length=200, blank=True)
     Compo_CHOICES = (
-        ('L', 'Laptops'),
-        ('S', 'Storage'),
-        ('M', 'Mobiles'),
-        ('F', 'Fashion'),
+        ('Laptops', 'Laptops'),
+        ('Storage', 'storage'),
+        ('Mobiles', 'Mobiles'),
+        ('Fashion', 'Fashion'),
     )
-    Component_Type=models.CharField(max_length=1, choices=Compo_CHOICES, blank=True)
+    Component_Type=models.CharField(max_length=10, choices=Compo_CHOICES, blank=True)
     STATUS_CHOICES = (
-        ('Y', 'Free'),
-        ('N', 'In use'),
+        ('FREE', 'Free'),
+        ('IN USE', 'In use'),
     )
-    Status = models.CharField(max_length=1, choices=STATUS_CHOICES)
-    Network_ID = models.CharField(max_length=200, blank=True)
+    Status = models.CharField(max_length=10, choices=STATUS_CHOICES)
+    Network_ID = models.CharField(max_length=200,primary_key=True, blank=True)
     Condition_CHOICES = (
-        ('U', 'Usable'),
-        ('F', 'faulty'),
+        ('USABLE', 'Usable'),
+        ('FAULTY', 'faulty'),
     )
-    Condition = models.CharField(max_length=1, choices=Condition_CHOICES, blank=True)
+    Condition = models.CharField(max_length=10, choices=Condition_CHOICES, blank=True)
     
 
     def __str__(self):
-        return self.component_name
+        return self.Component_Name
 
     class Meta:
         verbose_name_plural="items"
