@@ -49,36 +49,28 @@
        </style>
 </head>
 <body>
-<<<<<<< HEAD
-    <div class="container">
+    
+          <div style="background-color:#4262a5;  width:100%; float:left;">
+            <div class="center">
+               <h1>Component Management System</h1>
+             </div>
+             </div>
+             <div class="right">
+                    <a href="/accounts/logout"><button class="button">logout</button></a>
+                    </div>
+                    
+      <b>Welcome Home <b>{{user}}</b></b><div class="container">
         <div class="mx-auto" style="width:350px;">
-    <h1>This is home page</h1>
-    <p>welcome <b>{{user}}</b></p><br>
-    <p>{{title}} available are</p><br><br>
+    <b>Components available are</b><br><br><br>
     <ul>
             {% for item in Items %}
             <li><a href="/details/{{item.Network_ID}}">{{item.Component_Name}}</a></li>
             {% endfor %}
     </ul>
-    
-    <a href="/accounts/logout">logout</a>
     </div></div>
-=======
-  
-        
-                <div style="background-color:#4262a5;  width:100%; float:left;">
-                        <div class="center">
-                           <h1>Component Management System</h1>
-                         </div>
-                         </div>
-                         <div class="right">
-                                <a href="/accounts/logout"><button class="button">logout</button></a>
-                                </div>
-                                
-    <b>Welcome Home <b>{{user}}</b></b>
+     
      <div class="footer">
                 <p>Copyright© wipro python team </p>     
             </div>
->>>>>>> c0e22f94472a1714c580de32d6926b3cfccbb08e
 </body>
 </html>

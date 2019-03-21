@@ -2,8 +2,38 @@
 <html>
 <head>
 <style>
+  .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color:#4262a5;
+        color: white;
+        text-align: center;
+        font-size: 0.8em;
+     }
+  .button {
+              background-color:#4262a5;
+              border: none;
+              border-radius: 6px;
+              color: white;
+              padding: 10px 15px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 13px;
+              margin: 3px 2px;
+              cursor: pointer;
+            }
+  .center {
+             margin: auto;
+            width: 100%;
+            text-align: center;
+            color: rgb(233, 222, 222);
+            padding: 10px;}
+            
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid #4262a5;
   border-collapse: collapse;
 }
 th, td {
@@ -12,11 +42,17 @@ th, td {
 </style>
 </head>
 <body>
-
+  <div style="background-color:#4262a5;  width:100%; float:left;">
+    <div class="center">
+       <h1>Component Management System</h1>
+     </div>
+     </div>
+     <br><br><br><br><br>
+     <br>
 
 <table style="width:100%">
   <tr>
-    <th>component name</th>
+    <th>Component Name</th>
     <th>Component Type</th> 
     <th>Status</th>
     <th>Network_ID</th>
@@ -31,7 +67,9 @@ th, td {
   </tr>
 </table>
 
-<a href="/home">Go Back</a>
-
+<a href="/home"><button class="button">Go Back</button></a>
+<div class="footer">
+    <p>Copyright© wipro python team </p>     
+</div>
 </body>
 </html>
