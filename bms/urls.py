@@ -31,6 +31,8 @@ urlpatterns = [
     path('accounts/register/', register_view),
     path('accounts/logout/', logout_view),
     #url(r'^details/(?P<Network_ID>\w+)/$', details, name='details'),
-    path('details/<Network_ID>/', details),
+    #path('details/<Network_ID>/', details),
+    path('<Component_Type>/', details),
+    path('MyProducts/', Products)
 
 ]

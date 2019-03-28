@@ -57,14 +57,24 @@ th, td {
     <th>Status</th>
     <th>Network_ID</th>
     <th>Condition</th>
+    <th>Access</th>
   </tr>
-  <tr>
-    <td>{{Items.Component_Name}}</td>
-    <td>{{Items.Component_Type}}</td>
-    <td><b>{{Items.Status}}</b></td>
-    <td>{{Items.Network_ID}}</td>
-    <td><b>{{Items.Condition}}</b></td>
-  </tr>
+  {% for i in Items %}
+    <tr>
+      <td>{{i.Component_Name}}</td>
+      <td>{{i.Component_Type}}</td>
+      <td><b>{{i.Status}}</b></td>
+      <td>{{i.Network_ID}}</td>
+      <td><b>{{i.Condition}}</b></td>
+      <td>
+        {% if i.Status == "IN USE" or i.Condition == "FAULTY" %}
+          <p><b> NO ACCESS</b></p>
+        {% else %}
+          <a href="/{{user}}"><button class="button">GET</button></a>
+        {% endif %}
+      </td>
+    </tr>
+  {% endfor %}
 </table>
 
 <a href="/home"><button class="button">Go Back</button></a>

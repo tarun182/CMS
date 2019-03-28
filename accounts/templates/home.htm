@@ -63,8 +63,8 @@
         <div class="mx-auto" style="width:350px;">
     <b>Components available are</b><br><br>
     <ul>
-            {% for item in Items %}
-            <li><a href="/details/{{item.Network_ID}}">{{item.Component_Name}}</a></li>
+            {% for i,j in homeChoice %}
+              <li><a href="/{{i}}">{{i}}</a></li>
             {% endfor %}
     </ul>
     </div></div>

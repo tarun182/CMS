@@ -1,23 +1,24 @@
 from django.shortcuts import render
+#from django.views.generic import ListView
 from .models import items
 from django.contrib.auth.decorators import login_required
 
 @login_required
 def home(request):
-    Items=items.objects.all()[:10]
+    homeChoice=items.Compo_CHOICES
 
     context={
-        'title':'components',
-        'Items': Items
+        'homeChoice': homeChoice
     }
     return render(request, 'home.htm', context) 
 
 @login_required
-def details(request, Network_ID):
-    Items=items.objects.get(Network_ID=Network_ID )
+def details(request, Component_Type):
+    Items=items.objects.filter(Component_Type=Component_Type)
+    print(Items)
 
     context={
-        'title':'components',
         'Items': Items
     }
     return render(request, 'details.htm', context) 
+
